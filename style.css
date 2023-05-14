@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(./assests/images/interior-banner2.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.navbar {
+    height: 70px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar img {
+    height: 70px;
+    width: 100px;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px; 
+    padding-bottom: 5px;
+    position: relative; 
+}
+
+
+
+.navbar ul li a {
+    font-size: larger;
+    color:#FFE6C7;
+    letter-spacing: 1px;
+}
+
+.navbar ul li a::after {
+    content: "";
+    width:0;
+    height: 2px;
+    position: absolute;
+    background: #FFE6C7; 
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.content {
+ position: absolute;
+ width: 100%;
+ top: 40%;
+ text-align: center;
+ text-transform:transalateY(-50%);
+}
+
+.content p {
+    text-transform: lowercase;
+    font-size: 1.1rem;
+    color: #FFE6C7;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #FF6000;
+}
+.content button {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 25px;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    background: #FFE6C7;
+    color: black;
+    z-index: 0;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+span {
+    height: 100%;
+    width:0;
+    position: absolute;
+    background: #FF6000;
+    border-radius: 25px;
+    left:0;
+    top:0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+h2 {
+    display: none;
+}
+@media (max-width: 600px) {
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar img {        
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+    }
+
+   h2{
+    display: block;
+    font-size: 30px;
+    color: #FFA559;
+   } 
+
+    .navbar {
+        height: auto;
+        width: 100%;
+        display:inline-flex;
+        justify-content: center;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    .content {
+        top: 30%;
+    }
+
+    .banner {
+        background-image: none;
+        background: #454545;
+    }
+}
